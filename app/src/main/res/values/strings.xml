@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">Content_Provider_SMS</string>
+    <string name="sent_box">Sent Box</string>
+    <string name="inbox">Inbox</string>
 </resources>

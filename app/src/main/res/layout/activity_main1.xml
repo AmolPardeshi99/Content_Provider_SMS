@@ -3,20 +3,21 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/iv_msg"
     android:orientation="vertical"
+    android:background="@drawable/iv_msg"
     tools:context=".MainActivity">
 
     <ListView
         android:id="@+id/lvMsg"
+        android:elevation="10dp"
+        android:layout_marginTop="10dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_margin="10dp"
-        android:layout_marginTop="10dp"
-        android:layout_weight="2"
         android:divider="@android:color/black"
         android:dividerHeight="1dp"
-        android:elevation="10dp" />
+        android:layout_margin="10dp"
+        android:layout_weight="2">
+    </ListView>
 
     <LinearLayout
         android:id="@+id/linearLayout1"
@@ -25,25 +26,34 @@
         android:layout_weight="0">
 
         <Button
-            android:id="@+id/btnInbox"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
             android:layout_margin="5dp"
-            android:layout_weight="1"
+            android:id="@+id/btnInbox"
+            android:textStyle="bold"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
             android:backgroundTint="#FFA500"
-            android:text="@string/inbox"
-            android:textStyle="bold" />
+            android:layout_weight="1"
+            android:text="Inbox"/>
 
         <Button
-            android:id="@+id/btnSentBox"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
             android:layout_margin="5dp"
-            android:layout_weight="1"
+            android:id="@+id/btnSentBox"
+            android:textStyle="bold"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
             android:backgroundTint="#FFA500"
-            android:text="@string/sent_box"
-            android:textStyle="bold" />
+            android:layout_weight="1"
+            android:text="Sent Box"/>
 
+        <Button
+            android:id="@+id/btnDraft"
+            android:layout_margin="5dp"
+            android:textStyle="bold"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:backgroundTint="#FFA500"
+            android:layout_weight="1"
+            android:text="Draft"/>
     </LinearLayout>
 
 </LinearLayout>

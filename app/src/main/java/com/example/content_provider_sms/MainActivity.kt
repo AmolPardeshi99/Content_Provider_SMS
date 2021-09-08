@@ -18,7 +18,7 @@ class MainActivity : Activity(), View.OnClickListener {
         // setting Click-listeners
         btnInbox!!.setOnClickListener(this)
         btnSentBox!!.setOnClickListener(this)
-        btnDraft!!.setOnClickListener(this)
+        //btnDraft!!.setOnClickListener(this)
     }
 
     override fun onClick(v: View) {
@@ -62,23 +62,23 @@ class MainActivity : Activity(), View.OnClickListener {
             )
             lvMsg!!.adapter = adapter
         }
-        if (v === btnDraft) {
-            // Create Draft box URI
-            val draftURI = Uri.parse("content://sms/draft")
-            // List required columns
-            val reqCols = arrayOf("_id", "address", "body")
-            // Get Content Resolver object, which will deal with Content
-            // Provider
-            val cr = contentResolver
-            // Fetch Sent SMS Message from Built-in Content Provider
-            val c = cr.query(draftURI, reqCols, null, null, null)
-            // Attached Cursor with adapter and display in listview
-            adapter = SimpleCursorAdapter(
-                this, R.layout.item_layout, c, arrayOf("body", "address"), intArrayOf(
-                    R.id.tvMsg, R.id.tvNumber
-                )
-            )
-            lvMsg!!.adapter = adapter
-        }
+//        if (v === btnDraft) {
+//            // Create Draft box URI
+//            val draftURI = Uri.parse("content://sms/draft")
+//            // List required columns
+//            val reqCols = arrayOf("_id", "address", "body")
+//            // Get Content Resolver object, which will deal with Content
+//            // Provider
+//            val cr = contentResolver
+//            // Fetch Sent SMS Message from Built-in Content Provider
+//            val c = cr.query(draftURI, reqCols, null, null, null)
+//            // Attached Cursor with adapter and display in listview
+//            adapter = SimpleCursorAdapter(
+//                this, R.layout.item_layout, c, arrayOf("body", "address"), intArrayOf(
+//                    R.id.tvMsg, R.id.tvNumber
+//                )
+//            )
+//            lvMsg!!.adapter = adapter
+//        }
     }
 }
